@@ -1,0 +1,41 @@
+PHP-TODOLIST
+--------------------------------------------------------------------------------
+
+Homepage     : http://www.sodaware.net/dev/tools/php-todolist/
+Version      : 1.0
+Release Date : 20th March, 2001
+Licence      : BSD [ http://www.opensource.org/licenses/bsd-license.php ]
+
+
+Description
+-----------
+
+This is a simple PHP script that can scan a collection of files for comment tags
+that contain tasks, such as "TODO:" or "KLUDGE:". There are two parts: the
+ToDoParser class, which does most of the grunt work, and the frontend which can
+be used from the command line.
+
+
+Installation
+------------
+
+
+
+
+Usage
+-----
+
+Todo List searches for the following tags at the start of comments:
+
+TASK:, KLUDGE:, HACK:, NOTE:, TEMP:
+
+For example, the following comment would generate a Todo entry in the Hack
+category:
+
+; HACK: This is a hack.
+someBlitzCodeHere()
+
+Tasks can be filtered using the drop-down menu, and can be sorted by their line
+number, filename, type and description.
+
+
