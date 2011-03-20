@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright (c) 2009 Phil Newton
- * Homepage: http://www.sodaware.net/dev/tools/php-todo/
+ * Copyright (c) 2011 Phil Newton
+ * Homepage: http://www.sodaware.net/dev/tools/php-todolist/
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

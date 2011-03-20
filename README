@@ -12,30 +12,42 @@ Description
 
 This is a simple PHP script that can scan a collection of files for comment tags
 that contain tasks, such as "TODO:" or "KLUDGE:". There are two parts: the
-ToDoParser class, which does most of the grunt work, and the frontend which can
-be used from the command line.
+ToDoParser class, which does most of the grunt work, and the frontend which is
+used from the command line. 
+
+The get-todo and get-todo.bat scripts make things little cleaner to use but 
+aren't essential.
 
 
 Installation
 ------------
 
+The command line client requires the following PEAR packages:
+    * Console_Color
+    * Console_CommandLine
 
+The parser supports Console_Color but does not require it.
 
 
 Usage
 -----
 
-Todo List searches for the following tags at the start of comments:
+Usage:
+  todo.php [options] <files...>
 
-TASK:, KLUDGE:, HACK:, NOTE:, TEMP:
+Options:
+  -v, --verbose               Turn on verbose output (such as stats)
+  -c config, --config=config  The config file to load
+  -f, --format                Turn on colour formatting
+  -r, --recurse               Recurse directories when scanning
+  -h, --help                  show this help message and exit
+  --version                   show the program version and exit
 
-For example, the following comment would generate a Todo entry in the Hack
-category:
+Arguments:
+  files  list of files or directories to scan
 
-; HACK: This is a hack.
-someBlitzCodeHere()
+Example:
+get-todo -vf -c php todo.php
 
-Tasks can be filtered using the drop-down menu, and can be sorted by their line
-number, filename, type and description.
-
-
+Will fetch all PHP tasks from todo.php, and will output with colours and display
+statistics.
