@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>php-todolist - sodaware.github.com</title>
+	<link rel="stylesheet" href="/rsc/minimal.css" />
+</head>
+
+<body>
+
+<div id="">
+
+<div id="sidebar-container">
+	
+	<div class="sidebar_box">
+		<h2>Repositories</h2>
+		<ul>
+			<li class="selected"><a href="protean.todolist">protean.todolist</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar_box">
+		<h2>More Stuff</h2>
+		<ul>
+			<li><a href="http://www.sodaware.net/blog/">Blog</a></li>
+			<li><a href="http://www.sodaware.net/dev/">Developer Resources</a></li>
+		</ul>
+	</div>
+
+</div>
+
+<div id="content-container">
+	<h2><a href="http://sodaware.github.com">sodaware.github.com</a> / php-todolist</h2>
+	<h3>Simple TODO list generator</h3>
+
+	<table style="width: 100%">
+		
+		<tr>
+			<th scope="row">Homepage</th>
+			<td><a href="http://www.sodaware.net/dev/tools/php-todolist/">http://www.sodaware.net/dev/tools/php-todolist/</a></td>
+		</tr>
+
+		<tr>
+			<th scope="row">Version</th>
+			<td>1.0</td>
+		</tr>
+
+		<tr>
+			<th scope="row">Release Date</th>
+			<td>20th March, 2011</td>
+		</tr>
+
+		<tr>
+			<th scope="row">Licence</a>
+			<td>BSD [ http://www.opensource.org/licenses/bsd-license.php ]</td>
+		</tr>
+	</table>
+
+	<h4>Description</h4>
+	<p>
+		This is a simple PHP script that can scan a collection of files for comment tags
+		that contain tasks, such as <code>TODO:</code> or <code>KLUDGE:</code>. There are two parts: the
+		ToDoParser class, which does most of the grunt work, and the frontend which is
+		used from the command line.
+	</p>
+
+	<p>
+		The get-todo and get-todo.bat scripts make things little cleaner to use but 
+		aren't essential.
+	</p>
+
+	<h4>Installation</h4>
+	<p>The command line client requires the following PEAR packages:</p>
+	<ul>
+		<li>Console_Color</li>
+		<li>Console_CommandLine</li>
+	</ul>
+
+	<p>The parser supports Console_Color but does not require it.</p>
+
+
+	<h4>Usage</h4>
+
+	<pre>Usage:
+todo.php [options] &lt;files...&gt;
+
+Options:
+  -v, --verbose               Turn on verbose output (such as stats)
+  -c config, --config=config  The config file to load
+  -f, --format                Turn on colour formatting
+  -r, --recurse               Recurse directories when scanning
+  -h, --help                  show this help message and exit
+  --version                   show the program version and exit
+
+Arguments:
+  files  list of files or directories to scan
+
+Example:
+get-todo -vf -c php todo.php
+	</pre>
+
+	<p>
+		Will fetch all PHP tasks from todo.php, and will output with colours and display
+		statistics.
+	</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
